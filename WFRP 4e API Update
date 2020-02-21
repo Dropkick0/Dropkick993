@@ -127,11 +127,11 @@ on("chat:message", function(msg) {
     }
 	else if (76 <= head && head <=80)
     {
-        var headmsg = "Concussive Blow. CW 4 Your brain rattles in your skull as blood spurts from your nose and ears. Take 1 Deafened , 2 Bleeding , and 1d10 Stunned Conditions. Gain a Fatigued Condition that lasts for 1d10 days. If you receive another Critical Wound to your head while suffering this Fatigued Condition, make an Average (+20) Endurance Test or also gain an Unconscious Condition. Take 4 wounds.";
+        var headmsg = "Concussive Blow. CW 4 Your brain rattles in your skull as blood spurts from your nose and ears. Take 1 Deafened , 2 Bleeding , and [[1d10]] Stunned Conditions. Gain a Fatigued Condition that lasts for [[1d10]] days. If you receive another Critical Wound to your head while suffering this Fatigued Condition, make an Average (+20) Endurance Test or also gain an Unconscious Condition. Take 4 wounds.";
     }
 	else if (81 <= head && head <=85)
     {
-        var headmsg = "Smashed Mouth. CW 4 With a sickening crunch, your mouth is suddenly filled with broken teeth and blood. Gain 2 Bleeding Conditions. Lose 1d10 teeth Amputation (Easy). Take 4 wounds.";
+        var headmsg = "Smashed Mouth. CW 4 With a sickening crunch, your mouth is suddenly filled with broken teeth and blood. Gain 2 Bleeding Conditions. Lose [[1d10]] teeth Amputation (Easy). Take 4 wounds.";
     }
 	else if (86 <= head && head <=90)
     {
@@ -147,11 +147,11 @@ on("chat:message", function(msg) {
     }
 	else if (97 <= head && head <=99)
     {
-        var headmsg = "Mangled Jaw. CW 5 The blow almost removes your jaw as it utterly destroys your tongue, sending teeth flying in a shower of blood. Gain 4 Bleeding and 3 Stunned Conditions. Make a Very Hard (-30) Endurance Test or gain an Unconscious Condition. Suffer a Broken Bone (Major) injury and lose your tongue and 1d10 teeth Amputation (Hard). Take 5 wounds.";
+        var headmsg = "Mangled Jaw. CW 5 The blow almost removes your jaw as it utterly destroys your tongue, sending teeth flying in a shower of blood. Gain 4 Bleeding and 3 Stunned Conditions. Make a Very Hard (-30) Endurance Test or gain an Unconscious Condition. Suffer a Broken Bone (Major) injury and lose your tongue and [[1d10]] teeth Amputation (Hard). Take 5 wounds.";
     }
 	else if (head == 100)
     {
-        var headmsg = "Decapitated. Death Your head is entirely severed from your neck and soars through the air, landing 1d10 feet away in a random direction (see Scatter). Your body collapses, instantly dead. The good news is that you don't take any wounds.";
+        var headmsg = "Decapitated. Death Your head is entirely severed from your neck and soars through the air, landing [[1d10]] feet away in a random direction (see Scatter). Your body collapses, instantly dead. The good news is that you don't take any wounds.";
     }
     sendChat(msg.who, head + "%, " + headmsg);
   }
@@ -171,7 +171,7 @@ on("chat:message", function(msg) {
     }
 	else if (26 <= arm && arm <=30)
     {
-        var armmsg = "Badly Jarred Arm. CW 2 Your arm is badly jarred in the attack. Drop whatever was held in that hand, which is useless for 1d10 - Toughness Bonus Rounds (minimum 1). For this time, treat the hand as lost (see Amputated Parts). Take 2 wounds.";
+        var armmsg = "Badly Jarred Arm. CW 2 Your arm is badly jarred in the attack. Drop whatever was held in that hand, which is useless for [[1d10]] - Toughness Bonus Rounds (minimum 1). For this time, treat the hand as lost (see Amputated Parts). Take 2 wounds.";
     }
 	else if (31 <= arm && arm <=35)
     {
@@ -183,7 +183,7 @@ on("chat:message", function(msg) {
     }
 	else if (41 <= arm && arm <=45)
     {
-        var armmsg = "Wrenched Arm. CW 2 Your arm is almost pulled from its socket. Drop whatever is held in the associated hand; the arm is useless for 1d10 Rounds (see Amputated Parts). Take 2 wounds.";
+        var armmsg = "Wrenched Arm. CW 2 Your arm is almost pulled from its socket. Drop whatever is held in the associated hand; the arm is useless for [[1d10]] Rounds (see Amputated Parts). Take 2 wounds.";
     }
 	else if (46 <= arm && arm <=50)
     {
@@ -211,7 +211,7 @@ on("chat:message", function(msg) {
     }
 	else if (76 <= arm && arm <=80)
     {
-        var armmsg = "Dislocated Shoulder. CW 4 Your arm is wrenched out of its socket. Pass a Hard (-20) Endurance Test or gain the Stunned and Prone Condition. Drop whatever is held in that hand: the arm is useless and counts as lost (see Amputated Part). Gain 1 Stunned Condition until you receive Medical Attention. After this initial Medical Attention, an Extended Average (+20) Heal Test needing 6 SL is required to reset the arm, at which point you regain its use. Tests made using this arm suffer a -10 penalty for 1d10 days. Take 4 wounds.";
+        var armmsg = "Dislocated Shoulder. CW 4 Your arm is wrenched out of its socket. Pass a Hard (-20) Endurance Test or gain the Stunned and Prone Condition. Drop whatever is held in that hand: the arm is useless and counts as lost (see Amputated Part). Gain 1 Stunned Condition until you receive Medical Attention. After this initial Medical Attention, an Extended Average (+20) Heal Test needing 6 SL is required to reset the arm, at which point you regain its use. Tests made using this arm suffer a -10 penalty for [[1d10]] days. Take 4 wounds.";
     }
 	else if (81 <= arm && arm <=85)
     {
@@ -235,7 +235,7 @@ on("chat:message", function(msg) {
     }
 	else if (arm == 100)
     {
-        var armmsg = "Brutal Dismemberment. Death Your arm is severed, spraying arterial blood 1d10 feet in a random direction (see Scatter), before the blow follows through to your chest. You lose no wounds, because you are dead.";
+        var armmsg = "Brutal Dismemberment. Death Your arm is severed, spraying arterial blood [[1d10]] feet in a random direction (see Scatter), before the blow follows through to your chest. You lose no wounds, because you are dead.";
     }
     sendChat(msg.who, arm + "%, " + armmsg);
   }
@@ -259,15 +259,15 @@ on("chat:message", function(msg) {
     }
 	else if (31 <= body && body <=35)
     {
-        var bodymsg = "Winded. CW 2 Gain a Stunned Condition. Make an Average (+20) Endurance Test, or gain the Prone Condition. Movement is halved for 1d10 rounds as you get your breath back. Take 2 wounds.";
+        var bodymsg = "Winded. CW 2 Gain a Stunned Condition. Make an Average (+20) Endurance Test, or gain the Prone Condition. Movement is halved for [[1d10]] rounds as you get your breath back. Take 2 wounds.";
     }
 	else if (36 <= body && body <=40)
     {
-        var bodymsg = "Bruised Ribs. CW 2 All Agility-based Tests suffer a -10 penalty for 1d10 days. Take 2 wounds.";
+        var bodymsg = "Bruised Ribs. CW 2 All Agility-based Tests suffer a -10 penalty for [[1d10]] days. Take 2 wounds.";
     }
 	else if (41 <= body && body <=45)
     {
-        var bodymsg = "Wrenched Collar Bone. CW 2 Randomly select one arm. Drop whatever is held in that hand; the arm is useless for 1d10 rounds (see Amputated Parts). Take 2 wounds.";
+        var bodymsg = "Wrenched Collar Bone. CW 2 Randomly select one arm. Drop whatever is held in that hand; the arm is useless for [[1d10]] rounds (see Amputated Parts). Take 2 wounds.";
     }
 	else if (46 <= body && body <=50)
     {
@@ -331,7 +331,7 @@ on("chat:message", function(msg) {
     }
     else if (11 <= leg && leg <=20)
     {
-        var legmsg = "Twisted Ankle. CW 1 You go over your ankle, hurting it. Agility Tests suffer a -10 penalty for 1d10 rounds. Take 1 wound.";
+        var legmsg = "Twisted Ankle. CW 1 You go over your ankle, hurting it. Agility Tests suffer a -10 penalty for [[1d10]] rounds. Take 1 wound.";
     }
 	else if (21 <= leg && leg <=25)
     {
@@ -351,7 +351,7 @@ on("chat:message", function(msg) {
     }
 	else if (41 <= leg && leg <=45)
     {
-        var legmsg = "Twisted Knee. CW 2 You twist your knee too far. Agility Tests suffer a -20 penalty for 1d10 rounds. Take 2 wounds.";
+        var legmsg = "Twisted Knee. CW 2 You twist your knee too far. Agility Tests suffer a -20 penalty for [[1d10]] rounds. Take 2 wounds.";
     }
 	else if (46 <= leg && leg <=50)
     {
@@ -391,11 +391,11 @@ on("chat:message", function(msg) {
     }
 	else if (91 <= leg && leg <=93)
     {
-        var legmsg = "Crushed Foot. CW 5 The blow crushes your foot. Make an Average (+20) Endurance Test; if you fail, gain the Prone condition and lose 1 toe, plus 1 additional toe for each SL below 0 Amputation (Average). Gain 2 Bleeding Conditions. If you don't receive Surgery within 1d10 days, you will lose the foot entirely. Take 5 wounds.";
+        var legmsg = "Crushed Foot. CW 5 The blow crushes your foot. Make an Average (+20) Endurance Test; if you fail, gain the Prone condition and lose 1 toe, plus 1 additional toe for each SL below 0 Amputation (Average). Gain 2 Bleeding Conditions. If you don't receive Surgery within [[1d10]] days, you will lose the foot entirely. Take 5 wounds.";
     }
 	else if (94 <= leg && leg <=96)
     {
-        var legmsg = "Severed Foot. CW 5 Your foot is severed at the ankle and lands 1d10 feet away in a random direction Amputation (Hard) (see Scatter). You gain 3 Bleeding , 2 Stunned , and 1 Prone Condition. Take 5 wounds.";
+        var legmsg = "Severed Foot. CW 5 Your foot is severed at the ankle and lands [[1d10]] feet away in a random direction Amputation (Hard) (see Scatter). You gain 3 Bleeding , 2 Stunned , and 1 Prone Condition. Take 5 wounds.";
     }
 	else if (97 <= leg && leg <=99)
     {
@@ -415,7 +415,7 @@ on("chat:message", function(msg) {
     }
     else if (6 <= minormiscast && minormiscast <=10)
     {
-        var minormiscastmsg = "Soured Milk: All milk within 1d100 yards goes sour instantly";
+        var minormiscastmsg = "Soured Milk: All milk within [[1d100]] yards goes sour instantly";
     }
     else if (11 <= minormiscast && minormiscast <=15)
     {
@@ -427,7 +427,7 @@ on("chat:message", function(msg) {
     }
     else if (21 <= minormiscast && minormiscast <=25)
     {
-        var minormiscastmsg = "Witchlight: You glow with an eerie light related to your Lore, emitting as much light as a large bonfire, which lasts for 1d10 Rounds. ";
+        var minormiscastmsg = "Witchlight: You glow with an eerie light related to your Lore, emitting as much light as a large bonfire, which lasts for [[1d10]] Rounds. ";
     }
     else if (26 <= minormiscast && minormiscast <=30)
     {
@@ -435,7 +435,7 @@ on("chat:message", function(msg) {
     }
     else if (31 <= minormiscast && minormiscast <=35)
     {
-        var minormiscastmsg = "Rupture: Your nose, eyes, and ears bleed profusely. Gain 1d10 Bleeding Conditions.";
+        var minormiscastmsg = "Rupture: Your nose, eyes, and ears bleed profusely. Gain [[1d10]] Bleeding Conditions.";
     }
 	else if (36 <= minormiscast && minormiscast <=40)
     {
@@ -447,15 +447,15 @@ on("chat:message", function(msg) {
     }
 	else if (46 <= minormiscast && minormiscast <=50)
     {
-        var minormiscastmsg = "Wayward Garb: your clothes seem to writhe with a mind of their own. Receive 1 Entangled Condition with a Strength of 1d10×5 to resist.";
+        var minormiscastmsg = "Wayward Garb: your clothes seem to writhe with a mind of their own. Receive 1 Entangled Condition with a Strength of [[1d10]]×5 to resist.";
     }
     else if (51 <= minormiscast && minormiscast <=55)
     {
-        var minormiscastmsg = "Curse of Temperance: All alcohol within 1d100 yards goes bad, tasting bitter and foul.";
+        var minormiscastmsg = "Curse of Temperance: All alcohol within [[1d100]] yards goes bad, tasting bitter and foul.";
     }
     else if (56 <= minormiscast && minormiscast <=60)
     {
-        var minormiscastmsg = "Souldrain: Gain 1 Fatigued Condition, which remains for 1d10 hours";
+        var minormiscastmsg = "Souldrain: Gain 1 Fatigued Condition, which remains for [[1d10]] hours";
     }
     else if (61 <= minormiscast && minormiscast <=65)
     {
@@ -467,7 +467,7 @@ on("chat:message", function(msg) {
     }
     else if (71 <= minormiscast && minormiscast <=75)
     {
-        var minormiscastmsg = "Cloying Tongue: All Language Tests (including Casting Tests) suffer a –10 penalty for 1d10 Rounds. ";
+        var minormiscastmsg = "Cloying Tongue: All Language Tests (including Casting Tests) suffer a –10 penalty for [[1d10]] Rounds. ";
     }
     else if (76 <= minormiscast && minormiscast <=80)
     {
@@ -479,7 +479,7 @@ on("chat:message", function(msg) {
     }
     else if (86 <= minormiscast && minormiscast <=90)
     {
-        var minormiscastmsg = "Double Trouble: The effect of the spell you cast occurs elsewhere within 1d10 miles. At the GM’s discretion, where possible it should have consequences.";
+        var minormiscastmsg = "Double Trouble: The effect of the spell you cast occurs elsewhere within [[1d10]] miles. At the GM’s discretion, where possible it should have consequences.";
     }
     else if (91 <= minormiscast && minormiscast <=95)
     {
@@ -499,15 +499,15 @@ on("chat:message", function(msg) {
     }
     else if (6 <= majormiscast && majormiscast <=10)
     {
-        var majormiscastmsg = "Hexeyes: Your eyes turn an unnatural colour associated with your Lore for 1d10 hours. While your eyes are discoloured, you have 1 Blinded Condition that cannot be resolved by any means. ";
+        var majormiscastmsg = "Hexeyes: Your eyes turn an unnatural colour associated with your Lore for [[1d10]] hours. While your eyes are discoloured, you have 1 Blinded Condition that cannot be resolved by any means. ";
     }
     else if (11 <= majormiscast && majormiscast <=15)
     {
-        var majormiscastmsg = "Aethyric Shock: you suffer 1d10 wounds, ignoring your Toughness Bonus and Armour Points. Pass an Average (+20) Endurance Test, or also gain a Stunned Condition. ";
+        var majormiscastmsg = "Aethyric Shock: you suffer [[1d10]] wounds, ignoring your Toughness Bonus and Armour Points. Pass an Average (+20) Endurance Test, or also gain a Stunned Condition. ";
     }
     else if (16 <= majormiscast && majormiscast <=20)
     {
-        var majormiscastmsg = "Aethyric Shock: you suffer 1d10 wounds, ignoring your Toughness Bonus and Armour Points. Pass an Average (+20) Endurance Test, or also gain a Stunned Condition. ";
+        var majormiscastmsg = "Aethyric Shock: you suffer [[1d10]] wounds, ignoring your Toughness Bonus and Armour Points. Pass an Average (+20) Endurance Test, or also gain a Stunned Condition. ";
     }
     else if (21 <= majormiscast && majormiscast <=25)
     {
@@ -519,39 +519,39 @@ on("chat:message", function(msg) {
     }
     else if (31 <= majormiscast && majormiscast <=35)
     {
-        var majormiscastmsg = "Speak in Tongues: You gabble unintelligibly for 1d10 rounds. During this time, you cannot communicate verbally, or make any Casting Tests, although you may otherwise act normally. ";
+        var majormiscastmsg = "Speak in Tongues: You gabble unintelligibly for [[1d10]] rounds. During this time, you cannot communicate verbally, or make any Casting Tests, although you may otherwise act normally. ";
     }
     else if (36 <= majormiscast && majormiscast <=40)
     {
-        var majormiscastmsg = "Swarmed: You are engaged by a swarm of aethyric Rats, Giant Spiders, Snakes, or similar (GM’s choice). Use the standard profiles for the relevant creature type, adding the Swarm Creature Trait. After 1d10 rounds, if not yet destroyed, the swarm retreats. ";
+        var majormiscastmsg = "Swarmed: You are engaged by a swarm of aethyric Rats, Giant Spiders, Snakes, or similar (GM’s choice). Use the standard profiles for the relevant creature type, adding the Swarm Creature Trait. After [[1d10]] rounds, if not yet destroyed, the swarm retreats. ";
     }
     else if (41 <= majormiscast && majormiscast <=45)
     {
-        var majormiscastmsg = "Ragdoll: You are flung 1d10 yards through the air in a random direction, taking 1d10 wounds on landing, ignoring Armour Points, and receiving the Prone Condition. ";
+        var majormiscastmsg = "Ragdoll: You are flung 1d10 yards through the air in a random direction, taking [[1d10]] wounds on landing, ignoring Armour Points, and receiving the Prone Condition. ";
     }
     else if (46 <= majormiscast && majormiscast <=50)
     {
-        var majormiscastmsg = "Limb frozen: One limb (randomly determined) is frozen in place for 1d10 hours. The limb is useless, as if it had been Amputated (see page 180). ";
+        var majormiscastmsg = "Limb frozen: One limb (randomly determined) is frozen in place for [[1d10]] hours. The limb is useless, as if it had been Amputated (see page 180). ";
     }
     else if (51 <= majormiscast && majormiscast <=55)
     {
-        var majormiscastmsg = "Darkling Sight: You lose the benefit of the Second Sight Talent for 1d10 hours. Channelling Tests also suffer a penalty of –20 for the duration. ";
+        var majormiscastmsg = "Darkling Sight: You lose the benefit of the Second Sight Talent for [[1d10]] hours. Channelling Tests also suffer a penalty of –20 for the duration. ";
     }
     else if (56 <= majormiscast && majormiscast <=60)
     {
-        var majormiscastmsg = "Chaotic Foresight: Gain a bonus pool of 1d10 Fortune points (this may take you beyond your natural limit). Every time you spend one of these points, gain 1 Corruption point. Any of these points remaining at the end of the session are lost. ";
+        var majormiscastmsg = "Chaotic Foresight: Gain a bonus pool of [[1d10]] Fortune points (this may take you beyond your natural limit). Every time you spend one of these points, gain 1 Corruption point. Any of these points remaining at the end of the session are lost. ";
     }
     else if (61 <= majormiscast && majormiscast <=65)
     {
-        var majormiscastmsg = "Levitation: You are borne aloft on the Winds of Magic, floating 1d10 yards above the ground for 1d10 minutes. Other characters may forcibly move you, and you may move using spells, wings or similar, but will continually return to your levitating position if otherwise left alone. Refer to the Falling rules (see page 166) for what happens when Levitation ends.";
+        var majormiscastmsg = "Levitation: You are borne aloft on the Winds of Magic, floating [[1d10]] yards above the ground for [[1d10]] minutes. Other characters may forcibly move you, and you may move using spells, wings or similar, but will continually return to your levitating position if otherwise left alone. Refer to the Falling rules (see page 166) for what happens when Levitation ends.";
     }
     else if (66 <= majormiscast && majormiscast <=70)
     {
-        var majormiscastmsg = "Regurgitation: You spew uncontrollably, throwing up far more foul-smelling vomitus than your body can possibly contain. Gain the Stunned Condition, which lasts for 1d10 Rounds.";
+        var majormiscastmsg = "Regurgitation: You spew uncontrollably, throwing up far more foul-smelling vomitus than your body can possibly contain. Gain the Stunned Condition, which lasts for [[1d10]] Rounds.";
     }
     else if (71 <= majormiscast && majormiscast <=75)
     {
-        var majormiscastmsg = "Chaos Quake: All creatures within 1d100 yards must pass an Average (+20) Athletics Test or gain the Prone Condition. ";
+        var majormiscastmsg = "Chaos Quake: All creatures within [[1d100]] yards must pass an Average (+20) Athletics Test or gain the Prone Condition. ";
     }
     else if (76 <= majormiscast && majormiscast <=80)
     {
@@ -563,15 +563,15 @@ on("chat:message", function(msg) {
     }
     else if (86 <= majormiscast && majormiscast <=90)
     {
-        var majormiscastmsg = "Hellish Stench: You now smell really bad! You gain the Distracting Creature Trait (see page 339), and probably the enmity of anyone with a sense of smell. This lasts for 1d10 hours.";
+        var majormiscastmsg = "Hellish Stench: You now smell really bad! You gain the Distracting Creature Trait (see page 339), and probably the enmity of anyone with a sense of smell. This lasts for [[1d10]] hours.";
     }
     else if (91 <= majormiscast && majormiscast <=95)
     {
-        var majormiscastmsg = "Power Drain: You are unable to use the Talent used to cast the spell (usually Arcane Magic, though it could be Chaos Magic, or a similar Talent), for 1d10 minutes.";
+        var majormiscastmsg = "Power Drain: You are unable to use the Talent used to cast the spell (usually Arcane Magic, though it could be Chaos Magic, or a similar Talent), for [[1d10]] minutes.";
     }
     else if (96 <= majormiscast && majormiscast <=100)
     {
-        var majormiscastmsg = "Aethyric Feedback: Everyone within a number of yards equal to your Willpower Bonus — friend and foe alike — suffers 1d10 wounds, ignoring Toughness Bonus and Armour Points, and receives the Prone Condition. If there are no targets in range, the magic has nowhere to vent, so your head explodes, killing you instantly.";
+        var majormiscastmsg = "Aethyric Feedback: Everyone within a number of yards equal to your Willpower Bonus — friend and foe alike — suffers [[1d10]] wounds, ignoring Toughness Bonus and Armour Points, and receives the Prone Condition. If there are no targets in range, the magic has nowhere to vent, so your head explodes, killing you instantly.";
     }
     sendChat(msg.who, majormiscast + "%, " + majormiscastmsg);
   }
@@ -587,7 +587,7 @@ on("chat:message", function(msg) {
     }
     else if (11 <= wrathofthegods && wrathofthegods <=15)
     {
-        var wrathofthegodsmsg = "Heed My Lessons: You suffer a penalty of –10 to your Pray Skill for the next 1d10+Sin points Rounds.";
+        var wrathofthegodsmsg = "Heed My Lessons: You suffer a penalty of –10 to your Pray Skill for the next [[1d10]]+Sin points Rounds.";
     }
     else if (16 <= wrathofthegods && wrathofthegods <=20)
     {
@@ -595,15 +595,15 @@ on("chat:message", function(msg) {
     }
     else if (21 <= wrathofthegods && wrathofthegods <=25)
     {
-        var wrathofthegodsmsg = "You Try My Patience: You cannot enact any Pray Tests for 1d10 Rounds. ";
+        var wrathofthegodsmsg = "You Try My Patience: You cannot enact any Pray Tests for [[1d10]] Rounds. ";
     }
     else if (26 <= wrathofthegods && wrathofthegods <=30)
     {
-        var wrathofthegodsmsg = "You Do Not Understand My Intent: You suffer a penalty of –10 to any Skills associated with your deity (as determined by the GM) for the next 1d10+Sin points hours.";
+        var wrathofthegodsmsg = "You Do Not Understand My Intent: You suffer a penalty of –10 to any Skills associated with your deity (as determined by the GM) for the next [[1d10]]+Sin points hours.";
     }
     else if (31 <= wrathofthegods && wrathofthegods <=35)
     {
-        var wrathofthegodsmsg = "I Find Your Lack Of Faith Disturbing: You cannot enact any Pray Tests for 1d10+Sin points Rounds. ";
+        var wrathofthegodsmsg = "I Find Your Lack Of Faith Disturbing: You cannot enact any Pray Tests for [[1d10]]+Sin points Rounds. ";
     }
     else if (36 <= wrathofthegods && wrathofthegods <=40)
     {
@@ -611,7 +611,7 @@ on("chat:message", function(msg) {
     }
     else if (41 <= wrathofthegods && wrathofthegods <=45)
     {
-        var wrathofthegodsmsg = "Your Cause Is Unworthy: Your targets gain the Prone condition. Any Blessings or Miracles of your deity targeting them automatically fail for the next 1d10+Sin points days. ";
+        var wrathofthegodsmsg = "Your Cause Is Unworthy: Your targets gain the Prone condition. Any Blessings or Miracles of your deity targeting them automatically fail for the next [[1d10]]+Sin points days. ";
     }
     else if (46 <= wrathofthegods && wrathofthegods <=50)
     {
@@ -619,11 +619,11 @@ on("chat:message", function(msg) {
     }
     else if (51 <= wrathofthegods && wrathofthegods <=55)
     {
-        var wrathofthegodsmsg = "Feel My Wrath: You suffer 1d10+Sin points Wounds. Also attempt a Challenging (+0) Endurance Test. If you fail gain one Stunned Condition.";
+        var wrathofthegodsmsg = "Feel My Wrath: You suffer [[1d10]]+Sin points Wounds. Also attempt a Challenging (+0) Endurance Test. If you fail gain one Stunned Condition.";
     }
     else if (56 <= wrathofthegods && wrathofthegods <=60)
     {
-        var wrathofthegodsmsg = "I Shall Not Aid You: You suffer a penalty of –10 to a Skill associated with your deity (as determined by the GM) for the next 1d10+Sin Points days. ";
+        var wrathofthegodsmsg = "I Shall Not Aid You: You suffer a penalty of –10 to a Skill associated with your deity (as determined by the GM) for the next [[1d10]]+Sin Points days. ";
     }
     else if (61 <= wrathofthegods && wrathofthegods <=65)
     {
@@ -635,19 +635,19 @@ on("chat:message", function(msg) {
     }
     else if (71 <= wrathofthegods && wrathofthegods <=75)
     {
-        var wrathofthegodsmsg = "What Will You Sacrifice?: You suffer 1d10+Sin points Wounds, ignoring Toughness Bonus and APs. Also attempt a Difficult (–10) Endurance Test. If you fail gain one Stunned Condition.";
+        var wrathofthegodsmsg = "What Will You Sacrifice?: You suffer [[1d10]]+Sin points Wounds, ignoring Toughness Bonus and APs. Also attempt a Difficult (–10) Endurance Test. If you fail gain one Stunned Condition.";
     }
     else if (76 <= wrathofthegods && wrathofthegods <=80)
     {
-        var wrathofthegodsmsg = "You Have Sinned Against Me: Your god is extremely annoyed and forces you to you enact Pray Tests as your Action for the next 1d10+Sin Points Rounds as a penance";
+        var wrathofthegodsmsg = "You Have Sinned Against Me: Your god is extremely annoyed and forces you to you enact Pray Tests as your Action for the next [[1d10]]+Sin Points Rounds as a penance";
     }
     else if (81 <= wrathofthegods && wrathofthegods <=87)
     {
-        var wrathofthegodsmsg = "Purge the Flesh: You suffer 2d10+Sin points Wounds, ignoring Toughness Bonus and APs. Also attempt a Hard (–20) Endurance Test. If you fail gain one Stunned Condition. If you fail with –4 SL or fewer, gain an Unconscious Condition that lasts a minimum of 1d10 Rounds";
+        var wrathofthegodsmsg = "Purge the Flesh: You suffer 2d10+Sin points Wounds, ignoring Toughness Bonus and APs. Also attempt a Hard (–20) Endurance Test. If you fail gain one Stunned Condition. If you fail with –4 SL or fewer, gain an Unconscious Condition that lasts a minimum of [[1d10]] Rounds";
     }
     else if (wrathofthegods == 88)
     {
-        var wrathofthegodsmsg = "Daemonic Interference: The Dark Gods answer your pleas instead of your patron. 1d10 Lesser Daemons appear within 2d10 yards of your position, and attack the nearest targets.";
+        var wrathofthegodsmsg = "Daemonic Interference: The Dark Gods answer your pleas instead of your patron. [[1d10]] Lesser Daemons appear within 2d10 yards of your position, and attack the nearest targets.";
     }
     else if (89 <= wrathofthegods && wrathofthegods <=95)
     {
@@ -663,7 +663,7 @@ on("chat:message", function(msg) {
     }
     else if (106 <= wrathofthegods && wrathofthegods <=110)
     {
-        var wrathofthegodsmsg = "Do Not Use My Name In Vain: You lose the Bless and Invoke Talents for the next 1d10+Sin points days.";
+        var wrathofthegodsmsg = "Do Not Use My Name In Vain: You lose the Bless and Invoke Talents for the next [[1d10]]+Sin points days.";
     }
     else if (111 <= wrathofthegods && wrathofthegods <=115)
     {
